@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ImageBuilder` struct in crate `feed`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ImageBuilder">
+
+    <title>feed::rss::ImageBuilder - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>feed</a>::<wbr><a href='index.html'>rss</a></p><script>window.sidebarCurrent = {name: 'ImageBuilder', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>feed</a>::<wbr><a href='index.html'>rss</a>::<wbr><a class='struct' href=''>ImageBuilder</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-741' class='srclink' href='../../src/feed/src/rss/mod.rs.html#167-174' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct ImageBuilder {
+    // some fields omitted
+}</pre><div class='docblock'><p>This <code>ImageBuilder</code> struct creates the <code>Image</code>.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../feed/rss/struct.ImageBuilder.html' title='feed::rss::ImageBuilder'>ImageBuilder</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; <a class='struct' href='../../feed/rss/struct.ImageBuilder.html' title='feed::rss::ImageBuilder'>ImageBuilder</a></code></h4>
+<div class='docblock'><p>Construct a new <code>ImageBuilder</code> and return default values.</p>
+
+<h1 id='examples' class='section-header'><a href='#examples'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ImageBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>image_builder</span> <span class='op'>=</span> <span class='ident'>ImageBuilder</span>::<span class='ident'>new</span>();</pre>
+</div><h4 id='method.url' class='method'><code>fn <a href='#method.url' class='fnname'>url</a>(&amp;mut self, url: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; &amp;mut <a class='struct' href='../../feed/rss/struct.ImageBuilder.html' title='feed::rss::ImageBuilder'>ImageBuilder</a></code></h4>
+<div class='docblock'><p>Set the url that exists under <code>Image</code>.</p>
+
+<h1 id='examples-1' class='section-header'><a href='#examples-1'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ImageBuilder</span>;
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>image_builder</span> <span class='op'>=</span> <span class='ident'>ImageBuilder</span>::<span class='ident'>new</span>();
+<span class='ident'>image_builder</span>.<span class='ident'>url</span>(<span class='string'>&quot;http://jupiterbroadcasting.com/images/LAS-300-Badge.jpg&quot;</span>);</pre>
+</div><h4 id='method.title' class='method'><code>fn <a href='#method.title' class='fnname'>title</a>(&amp;mut self, title: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; &amp;mut <a class='struct' href='../../feed/rss/struct.ImageBuilder.html' title='feed::rss::ImageBuilder'>ImageBuilder</a></code></h4>
+<div class='docblock'><p>Set the title that exists under <code>Image</code>.</p>
+
+<h1 id='examples-2' class='section-header'><a href='#examples-2'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ImageBuilder</span>;
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>image_builder</span> <span class='op'>=</span> <span class='ident'>ImageBuilder</span>::<span class='ident'>new</span>();
+<span class='ident'>image_builder</span>.<span class='ident'>title</span>(<span class='string'>&quot;LAS 300 Logo&quot;</span>);</pre>
+</div><h4 id='method.link' class='method'><code>fn <a href='#method.link' class='fnname'>link</a>(&amp;mut self, link: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; &amp;mut <a class='struct' href='../../feed/rss/struct.ImageBuilder.html' title='feed::rss::ImageBuilder'>ImageBuilder</a></code></h4>
+<div class='docblock'><p>Set the link that exists under <code>Image</code>.</p>
+
+<h1 id='examples-3' class='section-header'><a href='#examples-3'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ImageBuilder</span>;
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>image_builder</span> <span class='op'>=</span> <span class='ident'>ImageBuilder</span>::<span class='ident'>new</span>();
+<span class='ident'>image_builder</span>.<span class='ident'>link</span>(<span class='string'>&quot;http://www.jupiterbroadcasting.com&quot;</span>);</pre>
+</div><h4 id='method.width' class='method'><code>fn <a href='#method.width' class='fnname'>width</a>(&amp;mut self, width: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>&gt;) -&gt; &amp;mut <a class='struct' href='../../feed/rss/struct.ImageBuilder.html' title='feed::rss::ImageBuilder'>ImageBuilder</a></code></h4>
+<div class='docblock'><p>Set the width that exists under <code>Image</code>.</p>
+
+<h1 id='examples-4' class='section-header'><a href='#examples-4'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ImageBuilder</span>;
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>image_builder</span> <span class='op'>=</span> <span class='ident'>ImageBuilder</span>::<span class='ident'>new</span>();
+<span class='ident'>image_builder</span>.<span class='ident'>width</span>(<span class='prelude-val'>Some</span>(<span class='number'>88</span>));</pre>
+</div><h4 id='method.height' class='method'><code>fn <a href='#method.height' class='fnname'>height</a>(&amp;mut self, height: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>&gt;) -&gt; &amp;mut <a class='struct' href='../../feed/rss/struct.ImageBuilder.html' title='feed::rss::ImageBuilder'>ImageBuilder</a></code></h4>
+<div class='docblock'><p>Set the height that exists under <code>Image</code>.</p>
+
+<h1 id='examples-5' class='section-header'><a href='#examples-5'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ImageBuilder</span>;
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>image_builder</span> <span class='op'>=</span> <span class='ident'>ImageBuilder</span>::<span class='ident'>new</span>();
+<span class='ident'>image_builder</span>.<span class='ident'>height</span>(<span class='prelude-val'>Some</span>(<span class='number'>88</span>));</pre>
+</div><h4 id='method.description' class='method'><code>fn <a href='#method.description' class='fnname'>description</a>(&amp;mut self, description: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;) -&gt; &amp;mut <a class='struct' href='../../feed/rss/struct.ImageBuilder.html' title='feed::rss::ImageBuilder'>ImageBuilder</a></code></h4>
+<div class='docblock'><p>Set the description that exists under <code>Image</code>.</p>
+
+<h1 id='examples-6' class='section-header'><a href='#examples-6'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ImageBuilder</span>;
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>image_builder</span> <span class='op'>=</span> <span class='ident'>ImageBuilder</span>::<span class='ident'>new</span>();
+<span class='ident'>image_builder</span>.<span class='ident'>description</span>(<span class='prelude-val'>Some</span>(<span class='string'>&quot;This is a test&quot;</span>.<span class='ident'>to_owned</span>()));</pre>
+</div><h4 id='method.finalize' class='method'><code>fn <a href='#method.finalize' class='fnname'>finalize</a>(&amp;self) -&gt; <a class='struct' href='../../feed/rss/struct.Image.html' title='feed::rss::Image'>Image</a></code></h4>
+<div class='docblock'><p>Construct the <code>Image</code> from the <code>ImageBuilder</code>.</p>
+
+<h1 id='examples-7' class='section-header'><a href='#examples-7'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ImageBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>image</span> <span class='op'>=</span> <span class='ident'>ImageBuilder</span>::<span class='ident'>new</span>()
+        .<span class='ident'>url</span>(<span class='string'>&quot;http://jupiterbroadcasting.com/images/LAS-300-Badge.jpg&quot;</span>)
+        .<span class='ident'>title</span>(<span class='string'>&quot;LAS 300 Logo&quot;</span>)
+        .<span class='ident'>link</span>(<span class='string'>&quot;http://www.jupiterbroadcasting.com&quot;</span>)
+        .<span class='ident'>width</span>(<span class='prelude-val'>Some</span>(<span class='number'>88</span>))
+        .<span class='ident'>height</span>(<span class='prelude-val'>Some</span>(<span class='number'>88</span>))
+        .<span class='ident'>description</span>(<span class='prelude-val'>Some</span>(<span class='string'>&quot;This is a test&quot;</span>.<span class='ident'>to_owned</span>()))
+        .<span class='ident'>finalize</span>();</pre>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../feed/rss/struct.ImageBuilder.html' title='feed::rss::ImageBuilder'>ImageBuilder</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../feed/rss/struct.ImageBuilder.html' title='feed::rss::ImageBuilder'>ImageBuilder</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "feed";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

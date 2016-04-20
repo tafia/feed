@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["feedio","The feed can be converted to xml."],["rss","All the structs for rss."]],"struct":[["Feed","This `Feed` struct contains all the items that exist for the feeds."],["FeedBuilder","This `FeedBuilder` struct creates the Feed struct from url, file, or &str."]]});

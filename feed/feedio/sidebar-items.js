@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["feed_reader","Implementation of `FeedReader`."],["feed_writer","Implementation of `FeedWriter`."]],"struct":[["FeedReader","This `FeedReader` struct parses the xml feed to the `Channel`."],["FeedWriter","This `FeedWriter` struct creates the xml from the `Channel`."]]});

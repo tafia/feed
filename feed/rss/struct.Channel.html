@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Channel` struct in crate `feed`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Channel">
+
+    <title>feed::rss::Channel - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>feed</a>::<wbr><a href='index.html'>rss</a></p><script>window.sidebarCurrent = {name: 'Channel', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>feed</a>::<wbr><a href='index.html'>rss</a>::<wbr><a class='struct' href=''>Channel</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-605' class='srclink' href='../../src/feed/src/rss/mod.rs.html#47-68' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Channel {
+    // some fields omitted
+}</pre><div class='docblock'><p>This <code>Channel</code> struct contains all the items that exist for the <code>feed</code>.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../feed/rss/struct.Channel.html' title='feed::rss::Channel'>Channel</a></code></h3><div class='impl-items'><h4 id='method.title' class='method'><code>fn <a href='#method.title' class='fnname'>title</a>(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<div class='docblock'><p>Get the title that exists under <code>Channel</code>.</p>
+
+<h1 id='examples' class='section-header'><a href='#examples'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>title</span> <span class='op'>=</span> <span class='string'>&quot;The Linux Action Show! OGG&quot;</span>;
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>title</span>(<span class='ident'>title</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>title</span>.<span class='ident'>to_owned</span>(), <span class='ident'>channel</span>.<span class='ident'>title</span>());</pre>
+</div><h4 id='method.link' class='method'><code>fn <a href='#method.link' class='fnname'>link</a>(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<div class='docblock'><p>Get the link that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-1' class='section-header'><a href='#examples-1'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>link</span> <span class='op'>=</span> <span class='string'>&quot;http://www.jupiterbroadcasting.com&quot;</span>;
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>link</span>(<span class='ident'>link</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>link</span>.<span class='ident'>to_owned</span>(), <span class='ident'>channel</span>.<span class='ident'>link</span>());</pre>
+</div><h4 id='method.description' class='method'><code>fn <a href='#method.description' class='fnname'>description</a>(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<div class='docblock'><p>Get the description that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-2' class='section-header'><a href='#examples-2'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>description</span> <span class='op'>=</span> <span class='string'>&quot;Ogg Vorbis audio versions of The Linux &quot;</span>.<span class='ident'>to_owned</span>()
+<span class='op'>+</span> <span class='string'>&quot;Action Show! A show that covers everything geeks care about in the &quot;</span>
+<span class='op'>+</span> <span class='string'>&quot;computer industry. Get a solid dose of Linux, gadgets, news events &quot;</span>
+<span class='op'>+</span> <span class='string'>&quot;and much more!&quot;</span>;
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>description</span>(<span class='ident'>description</span>.<span class='ident'>as_ref</span>())
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>description</span>.<span class='ident'>to_owned</span>(), <span class='ident'>channel</span>.<span class='ident'>description</span>());</pre>
+</div><h4 id='method.language' class='method'><code>fn <a href='#method.language' class='fnname'>language</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional language that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-3' class='section-header'><a href='#examples-3'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>language_string</span> <span class='op'>=</span> <span class='string'>&quot;en&quot;</span>.<span class='ident'>to_owned</span>();
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>language</span>(<span class='prelude-val'>Some</span>(<span class='ident'>language_string</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>language_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>language</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>language_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>language</span> <span class='op'>=</span> <span class='ident'>language_option</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>language_string</span>.<span class='ident'>clone</span>(), <span class='ident'>language</span>);</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>language</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>language</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.copyright' class='method'><code>fn <a href='#method.copyright' class='fnname'>copyright</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional copyright that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-4' class='section-header'><a href='#examples-4'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>copyright_string</span> <span class='op'>=</span>
+    <span class='string'>&quot;Copyright 2002, Spartanburg Herald-Journal&quot;</span>.<span class='ident'>to_owned</span>();
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>copyright</span>(<span class='prelude-val'>Some</span>(<span class='ident'>copyright_string</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>copyright_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>copyright</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>copyright_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>copyright</span> <span class='op'>=</span> <span class='ident'>copyright_option</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>copyright_string</span>.<span class='ident'>clone</span>(), <span class='ident'>copyright</span>);</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>copyright</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>copyright</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.managing_editor' class='method'><code>fn <a href='#method.managing_editor' class='fnname'>managing_editor</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional managing editor that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-5' class='section-header'><a href='#examples-5'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>managing_editor_string</span> <span class='op'>=</span>
+    <span class='string'>&quot;chris@jupiterbroadcasting.com (Chris Fisher)&quot;</span>.<span class='ident'>to_owned</span>();
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>managing_editor</span>(<span class='prelude-val'>Some</span>(<span class='ident'>managing_editor_string</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>managing_editor_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>managing_editor</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>managing_editor_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>managing_editor</span> <span class='op'>=</span> <span class='ident'>managing_editor_option</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>managing_editor_string</span>.<span class='ident'>clone</span>(), <span class='ident'>managing_editor</span>);</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>managing_editor</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>managing_editor</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.web_master' class='method'><code>fn <a href='#method.web_master' class='fnname'>web_master</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional web master that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-6' class='section-header'><a href='#examples-6'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>web_master_string</span> <span class='op'>=</span>
+    <span class='string'>&quot;chris@jupiterbroadcasting.com (Chris Fisher)&quot;</span>.<span class='ident'>to_owned</span>();
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>web_master</span>(<span class='prelude-val'>Some</span>(<span class='ident'>web_master_string</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>web_master_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>web_master</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>web_master_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>web_master</span> <span class='op'>=</span> <span class='ident'>web_master_option</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>web_master_string</span>.<span class='ident'>clone</span>(), <span class='ident'>web_master</span>);</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>web_master</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>web_master</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.pub_date' class='method'><code>fn <a href='#method.pub_date' class='fnname'>pub_date</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='../../chrono/offset/fixed/struct.FixedOffset.html' title='chrono::offset::fixed::FixedOffset'>FixedOffset</a>&gt;&gt;</code></h4>
+<div class='docblock'><p>Get the optional pub date that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-7' class='section-header'><a href='#examples-7'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>pub_date</span> <span class='op'>=</span> <span class='string'>&quot;Sun, 13 Mar 2016 20:02:02 -0700&quot;</span>;
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>pub_date</span>(<span class='prelude-val'>Some</span>(<span class='ident'>pub_date</span>.<span class='ident'>to_owned</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>local</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>pub_date</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>local</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>local_result</span> <span class='op'>=</span> <span class='ident'>local</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>pub_date</span>.<span class='ident'>to_owned</span>(), <span class='ident'>local_result</span>.<span class='ident'>to_rfc2822</span>());</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>pub_date</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>pub_date</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.last_build_date' class='method'><code>fn <a href='#method.last_build_date' class='fnname'>last_build_date</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='../../chrono/offset/fixed/struct.FixedOffset.html' title='chrono::offset::fixed::FixedOffset'>FixedOffset</a>&gt;&gt;</code></h4>
+<div class='docblock'><p>Get the optional last build date that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-8' class='section-header'><a href='#examples-8'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>last_build_date</span> <span class='op'>=</span> <span class='string'>&quot;Sun, 13 Mar 2016 20:02:02 -0700&quot;</span>;
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>last_build_date</span>(<span class='prelude-val'>Some</span>(<span class='ident'>last_build_date</span>.<span class='ident'>to_owned</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>local</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>last_build_date</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>local</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>local_result</span> <span class='op'>=</span> <span class='ident'>local</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>last_build_date</span>.<span class='ident'>to_owned</span>(), <span class='ident'>local_result</span>.<span class='ident'>to_rfc2822</span>());</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>last_build_date</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>last_build_date</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.categories' class='method'><code>fn <a href='#method.categories' class='fnname'>categories</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../feed/rss/struct.Category.html' title='feed::rss::Category'>Category</a>&gt;&gt;</code></h4>
+<div class='docblock'><p>Get the optional categories that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-9' class='section-header'><a href='#examples-9'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::{<span class='ident'>ChannelBuilder</span>, <span class='ident'>CategoryBuilder</span>};
+
+<span class='kw'>let</span> <span class='ident'>category_1</span> <span class='op'>=</span> <span class='ident'>CategoryBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>domain</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>category</span>(<span class='string'>&quot;Media&quot;</span>)
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>category_2</span> <span class='op'>=</span> <span class='ident'>CategoryBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>domain</span>(<span class='prelude-val'>Some</span>(<span class='string'>&quot;http://jupiterbroadcasting.com&quot;</span>.<span class='ident'>to_owned</span>()))
+    .<span class='ident'>category</span>(<span class='string'>&quot;Podcast&quot;</span>)
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>categories_vec</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='ident'>category_1</span>, <span class='ident'>category_2</span>];
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>categories</span>(<span class='prelude-val'>Some</span>(<span class='ident'>categories_vec</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>categories_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>categories</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>categories_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>categories</span> <span class='op'>=</span> <span class='ident'>categories_option</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>categories_vec</span>.<span class='ident'>clone</span>().<span class='ident'>len</span>(), <span class='ident'>categories</span>.<span class='ident'>len</span>());</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>categories</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>categories</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.generator' class='method'><code>fn <a href='#method.generator' class='fnname'>generator</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional generator that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-10' class='section-header'><a href='#examples-10'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>generator_string</span> <span class='op'>=</span> <span class='string'>&quot;Feeder 2.5.12(2294); &quot;</span>.<span class='ident'>to_owned</span>()
+<span class='op'>+</span> <span class='string'>&quot;Mac OS X Version 10.9.5 (Build 13F34) &quot;</span>
+<span class='op'>+</span> <span class='string'>&quot;http://reinventedsoftware.com/feeder/&quot;</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>generator</span>(<span class='prelude-val'>Some</span>(<span class='ident'>generator_string</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>generator_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>generator</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>generator_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>generator</span> <span class='op'>=</span> <span class='ident'>generator_option</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>generator_string</span>.<span class='ident'>clone</span>(), <span class='ident'>generator</span>);</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>generator</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>generator</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.docs' class='method'><code>fn <a href='#method.docs' class='fnname'>docs</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional docs that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-11' class='section-header'><a href='#examples-11'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>docs_string</span> <span class='op'>=</span> <span class='string'>&quot;http://blogs.law.harvard.edu/tech/rss&quot;</span>.<span class='ident'>to_owned</span>();
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>docs</span>(<span class='prelude-val'>Some</span>(<span class='ident'>docs_string</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>docs_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>docs</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>docs_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>docs</span> <span class='op'>=</span> <span class='ident'>docs_option</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>docs_string</span>.<span class='ident'>clone</span>(), <span class='ident'>docs</span>);</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>docs</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>docs</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.cloud' class='method'><code>fn <a href='#method.cloud' class='fnname'>cloud</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../feed/rss/struct.Cloud.html' title='feed::rss::Cloud'>Cloud</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional cloud that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-12' class='section-header'><a href='#examples-12'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::{<span class='ident'>ChannelBuilder</span>, <span class='ident'>CloudBuilder</span>};
+
+<span class='kw'>let</span> <span class='ident'>cloud</span> <span class='op'>=</span> <span class='ident'>CloudBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>domain</span>(<span class='string'>&quot;rpc.sys.com&quot;</span>)
+    .<span class='ident'>port</span>(<span class='number'>80</span>)
+    .<span class='ident'>path</span>(<span class='string'>&quot;/RPC2&quot;</span>)
+    .<span class='ident'>register_procedure</span>(<span class='string'>&quot;pingMe&quot;</span>)
+    .<span class='ident'>protocol</span>(<span class='string'>&quot;soap&quot;</span>)
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>cloud</span>(<span class='prelude-val'>Some</span>(<span class='ident'>cloud</span>))
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>cloud</span>().<span class='ident'>is_some</span>());</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>cloud</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>cloud</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.ttl' class='method'><code>fn <a href='#method.ttl' class='fnname'>ttl</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional ttl that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-13' class='section-header'><a href='#examples-13'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>ttl_num</span> <span class='op'>=</span> <span class='number'>60</span>;
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>ttl</span>(<span class='prelude-val'>Some</span>(<span class='ident'>ttl_num</span>))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>ttl_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>ttl</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>ttl_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>ttl</span> <span class='op'>=</span> <span class='ident'>ttl_option</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>ttl_num</span>, <span class='ident'>ttl</span>);</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>ttl</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>ttl</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.image' class='method'><code>fn <a href='#method.image' class='fnname'>image</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../feed/rss/struct.Image.html' title='feed::rss::Image'>Image</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional image that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-14' class='section-header'><a href='#examples-14'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::{<span class='ident'>ChannelBuilder</span>, <span class='ident'>ImageBuilder</span>};
+
+<span class='kw'>let</span> <span class='ident'>image</span> <span class='op'>=</span> <span class='ident'>ImageBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>link</span>(<span class='string'>&quot;http://www.jupiterbroadcasting.com&quot;</span>)
+    .<span class='ident'>url</span>(<span class='string'>&quot;http://jupiterbroadcasting.com/images/LAS-300-Badge.jpg&quot;</span>)
+    .<span class='ident'>title</span>(<span class='string'>&quot;LAS 300 Logo&quot;</span>)
+    .<span class='ident'>height</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>width</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>description</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>image</span>(<span class='prelude-val'>Some</span>(<span class='ident'>image</span>))
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>image</span>().<span class='ident'>is_some</span>());</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>image</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>image</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.rating' class='method'><code>fn <a href='#method.rating' class='fnname'>rating</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional rating that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-15' class='section-header'><a href='#examples-15'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>rating_string</span> <span class='op'>=</span> <span class='string'>&quot;PG-13:&quot;</span>.<span class='ident'>to_owned</span>();
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>rating</span>(<span class='prelude-val'>Some</span>(<span class='ident'>rating_string</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>rating_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>rating</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>rating_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>rating</span> <span class='op'>=</span> <span class='ident'>rating_option</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>rating_string</span>, <span class='ident'>rating</span>);</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>rating</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>rating</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.text_input' class='method'><code>fn <a href='#method.text_input' class='fnname'>text_input</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../feed/rss/struct.TextInput.html' title='feed::rss::TextInput'>TextInput</a>&gt;</code></h4>
+<div class='docblock'><p>Get the optional text input that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-16' class='section-header'><a href='#examples-16'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::{<span class='ident'>ChannelBuilder</span>, <span class='ident'>TextInputBuilder</span>};
+
+<span class='kw'>let</span> <span class='ident'>text_input</span> <span class='op'>=</span> <span class='ident'>TextInputBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>title</span>(<span class='string'>&quot;Enter Comment&quot;</span>)
+    .<span class='ident'>description</span>(<span class='string'>&quot;Provided Feedback&quot;</span>)
+    .<span class='ident'>name</span>(<span class='string'>&quot;Comment&quot;</span>)
+    .<span class='ident'>link</span>(<span class='string'>&quot;www.example.com/feedback&quot;</span>)
+    .<span class='ident'>finalize</span>();
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>text_input</span>(<span class='prelude-val'>Some</span>(<span class='ident'>text_input</span>))
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>text_input</span>().<span class='ident'>is_some</span>());</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>text_input</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>text_input</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.skip_hours' class='method'><code>fn <a href='#method.skip_hours' class='fnname'>skip_hours</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>&gt;&gt;</code></h4>
+<div class='docblock'><p>Get the optional skip hours that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-17' class='section-header'><a href='#examples-17'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>skip_hours_vec</span>: <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>i64</span><span class='op'>&gt;</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>6</span>,<span class='number'>7</span>,<span class='number'>8</span>,<span class='number'>14</span>,<span class='number'>22</span>];
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>skip_hours</span>(<span class='prelude-val'>Some</span>(<span class='ident'>skip_hours_vec</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>skip_hours_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>skip_hours</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>skip_hours_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>skip_hours</span> <span class='op'>=</span> <span class='ident'>skip_hours_option</span>.<span class='ident'>unwrap</span>();
+<span class='kw'>let</span> <span class='ident'>len</span> <span class='op'>=</span> <span class='ident'>skip_hours_vec</span>.<span class='ident'>clone</span>().<span class='ident'>len</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>len</span>, <span class='ident'>skip_hours</span>.<span class='ident'>len</span>());
+<span class='kw'>for</span> <span class='ident'>x</span> <span class='kw'>in</span> <span class='number'>0</span>..<span class='ident'>len</span> {
+    <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>skip_hours_vec</span>[<span class='ident'>x</span>], <span class='ident'>skip_hours</span>[<span class='ident'>x</span>]);
+}</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>skip_hours</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>skip_hours</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.skip_days' class='method'><code>fn <a href='#method.skip_days' class='fnname'>skip_days</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;</code></h4>
+<div class='docblock'><p>Get the optional skip days that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-18' class='section-header'><a href='#examples-18'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>skip_days_vec</span>: <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>String</span><span class='op'>&gt;</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='string'>&quot;Monday&quot;</span>.<span class='ident'>to_owned</span>(),
+    <span class='string'>&quot;Wednesday&quot;</span>.<span class='ident'>to_owned</span>(),<span class='string'>&quot;Thursday&quot;</span>.<span class='ident'>to_owned</span>(),<span class='string'>&quot;Sunday&quot;</span>.<span class='ident'>to_owned</span>()];
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>skip_days</span>(<span class='prelude-val'>Some</span>(<span class='ident'>skip_days_vec</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>skip_days_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>skip_days</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>skip_days_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>skip_days</span> <span class='op'>=</span> <span class='ident'>skip_days_option</span>.<span class='ident'>unwrap</span>();
+<span class='kw'>let</span> <span class='ident'>len</span> <span class='op'>=</span> <span class='ident'>skip_days_vec</span>.<span class='ident'>clone</span>().<span class='ident'>len</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>len</span>, <span class='ident'>skip_days</span>.<span class='ident'>len</span>());
+<span class='kw'>for</span> <span class='ident'>x</span> <span class='kw'>in</span> <span class='number'>0</span>..<span class='ident'>len</span> {
+    <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>skip_days_vec</span>[<span class='ident'>x</span>], <span class='ident'>skip_days</span>[<span class='ident'>x</span>]);
+}</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>skip_days</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>skip_days</span>().<span class='ident'>is_none</span>());</pre>
+</div><h4 id='method.items' class='method'><code>fn <a href='#method.items' class='fnname'>items</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../feed/rss/struct.Item.html' title='feed::rss::Item'>Item</a>&gt;&gt;</code></h4>
+<div class='docblock'><p>Get the optional items that exists under <code>Channel</code>.</p>
+
+<h1 id='examples-19' class='section-header'><a href='#examples-19'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::{<span class='ident'>ChannelBuilder</span>, <span class='ident'>ItemBuilder</span>};
+
+<span class='kw'>let</span> <span class='ident'>link</span> <span class='op'>=</span> <span class='string'>&quot;http://www.jupiterbroadcasting.com/97561/&quot;</span>.<span class='ident'>to_owned</span>()
+<span class='op'>+</span> <span class='string'>&quot;making-music-with-linux-las-408/&quot;</span>;
+
+<span class='kw'>let</span> <span class='ident'>description</span> <span class='op'>=</span> <span class='string'>&quot;&lt;![CDATA[&lt;p&gt;In special Rasberry Pi 3 &quot;</span>.<span class='ident'>to_owned</span>()
+<span class='op'>+</span> <span class='string'>&quot;edition of the show we look at the new hardware, review &amp; chat with &quot;</span>
+<span class='op'>+</span> <span class='string'>&quot;Mycroft CTO Ryan Sipes on how important the Raspberry Pi is for &quot;</span>
+<span class='op'>+</span> <span class='string'>&quot;development of their open artificial intelligence platform &amp; get &quot;</span>
+<span class='op'>+</span> <span class='string'>&quot;the latest news.&lt;/p&gt;&lt;p&gt;Plus replacing Spotify on Linux, the new &quot;</span>
+<span class='op'>+</span> <span class='string'>&quot;Microsoft lock-in, our hosts face a moral quandary &amp; more!&lt;/p&gt;]]&gt;&quot;</span>;
+
+<span class='kw'>let</span> <span class='ident'>title</span> <span class='op'>=</span> <span class='string'>&quot;Making Music with Linux | LAS 408&quot;</span>.<span class='ident'>to_owned</span>();
+
+<span class='kw'>let</span> <span class='ident'>item_1</span> <span class='op'>=</span> <span class='ident'>ItemBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>title</span>(<span class='prelude-val'>Some</span>(<span class='ident'>title</span>))
+    .<span class='ident'>link</span>(<span class='prelude-val'>Some</span>(<span class='ident'>link</span>))
+    .<span class='ident'>description</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>author</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>categories</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>enclosure</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>guid</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>pub_date</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>source</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>item_2</span> <span class='op'>=</span> <span class='ident'>ItemBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>title</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>link</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>description</span>(<span class='prelude-val'>Some</span>(<span class='ident'>description</span>))
+    .<span class='ident'>author</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>categories</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>enclosure</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>guid</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>pub_date</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>source</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>items_vec</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='ident'>item_1</span>, <span class='ident'>item_2</span>];
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>items</span>(<span class='prelude-val'>Some</span>(<span class='ident'>items_vec</span>.<span class='ident'>clone</span>()))
+    .<span class='ident'>finalize</span>();
+<span class='kw'>let</span> <span class='ident'>items_option</span> <span class='op'>=</span> <span class='ident'>channel</span>.<span class='ident'>items</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>items_option</span>.<span class='ident'>is_some</span>());
+<span class='kw'>let</span> <span class='ident'>items</span> <span class='op'>=</span> <span class='ident'>items_option</span>.<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>items_vec</span>.<span class='ident'>clone</span>().<span class='ident'>len</span>(), <span class='ident'>items</span>.<span class='ident'>len</span>());</pre>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>feed</span>::<span class='ident'>rss</span>::<span class='ident'>ChannelBuilder</span>;
+
+<span class='kw'>let</span> <span class='ident'>channel</span> <span class='op'>=</span> <span class='ident'>ChannelBuilder</span>::<span class='ident'>new</span>()
+    .<span class='ident'>items</span>(<span class='prelude-val'>None</span>)
+    .<span class='ident'>finalize</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>channel</span>.<span class='ident'>items</span>().<span class='ident'>is_none</span>());</pre>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../feed/rss/struct.Channel.html' title='feed::rss::Channel'>Channel</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../feed/rss/struct.Channel.html' title='feed::rss::Channel'>Channel</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../feed/rss/struct.Channel.html' title='feed::rss::Channel'>Channel</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../feed/rss/struct.Channel.html' title='feed::rss::Channel'>Channel</a></code></h4>
+<h4 id='method.clone_from' class='method'><span class="since">1.0.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "feed";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
